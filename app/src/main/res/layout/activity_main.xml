@@ -168,14 +168,14 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/temperature" />
+                    app:srcCompat="@drawable/rain" />
 
                 <TextView
-
+                    android:id="@+id/rain"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="00:00" />
 
                 <TextView
 
@@ -183,7 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="Rain" />
             </LinearLayout>
 
             <LinearLayout
@@ -198,14 +198,14 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/temperature" />
+                    app:srcCompat="@drawable/windspeed" />
 
                 <TextView
-
+                    android:id="@+id/windspeed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="00:00" />
 
                 <TextView
 
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="Wave" />
             </LinearLayout>
 
             <LinearLayout
@@ -228,14 +228,14 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/temperature" />
+                    app:srcCompat="@drawable/sunset" />
 
                 <TextView
-
+                    android:id="@+id/sunset"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="00:00" />
 
                 <TextView
 
@@ -243,7 +243,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="Sunset" />
             </LinearLayout>
 
             <LinearLayout
@@ -258,14 +258,14 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/temperature" />
+                    app:srcCompat="@drawable/humidity" />
 
                 <TextView
-
+                    android:id="@+id/humidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="00:00" />
 
                 <TextView
 
@@ -273,7 +273,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="Humidity" />
             </LinearLayout>
 
             <LinearLayout
@@ -285,17 +285,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-
+                    android:id="@+id/sunrise"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/temperature" />
+                    app:srcCompat="@drawable/sunrise" />
 
                 <TextView
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="00:00" />
 
                 <TextView
 
@@ -303,7 +303,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="Sunrise" />
             </LinearLayout>
 
             <LinearLayout
@@ -318,14 +318,14 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/temperature" />
+                    app:srcCompat="@drawable/sea" />
 
                 <TextView
-
+                    android:id="@+id/sea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="00:00" />
 
                 <TextView
 
@@ -333,7 +333,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="Sea" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
