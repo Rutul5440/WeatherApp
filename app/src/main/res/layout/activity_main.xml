@@ -168,14 +168,15 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/rain" />
+                    app:srcCompat="@drawable/conditions" />
 
                 <TextView
                     android:id="@+id/rain"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="00:00" />
+                    android:textAllCaps="true"
+                    android:text="SUNNY" />
 
                 <TextView
 
@@ -183,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="Rain" />
+                    android:text="Condition" />
             </LinearLayout>
 
             <LinearLayout
@@ -205,7 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="00:00" />
+                    android:text="0.00 m/s" />
 
                 <TextView
 
