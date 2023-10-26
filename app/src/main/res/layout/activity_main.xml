@@ -4,22 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sunny_background"
+    android:background="@drawable/main_background"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/house" />
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/searchviewshape"
         android:queryHint="Locate City Forecast"
-        android:textColor = "@color/black"
         android:searchIcon="@drawable/search"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,8 +38,7 @@
         android:id="@+id/cityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:drawableLeft="@drawable/location"
+        android:layout_marginTop="10dp"
         android:drawablePadding="10dp"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -41,59 +51,49 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="12dp"
         android:text="Today"
-        android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sunnyimage"
+        app:layout_constraintEnd_toEndOf="@+id/cityName"
+        app:layout_constraintStart_toStartOf="@+id/cityName"
         app:layout_constraintTop_toBottomOf="@+id/cityName" />
 
     <TextView
         android:id="@+id/temprature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00:00 °C"
-        android:textColor="@color/black"
-        android:textSize="50sp"
+        android:text="00:00 °"
+        android:textColor="@color/white"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <ImageView
-        android:id="@+id/sunnyimage"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cityName"
-        app:srcCompat="@drawable/sun" />
 
     <TextView
         android:id="@+id/weather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="SUNNY"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/sunnyimage"
-        app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toStartOf="@+id/sunnyimage"
-        app:layout_constraintTop_toBottomOf="@+id/sunnyimage" />
+        app:layout_constraintEnd_toEndOf="@+id/temprature"
+        app:layout_constraintStart_toStartOf="@+id/temprature"
+        app:layout_constraintTop_toBottomOf="@+id/temprature" />
 
     <TextView
         android:id="@+id/max_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Max : 00:00 °C"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.744"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="12dp"
+        android:text="H:00:00°"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weather" />
 
@@ -101,12 +101,13 @@
         android:id="@+id/min_temo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Min : 00:00 °C"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/max_temp"
-        app:layout_constraintStart_toStartOf="@+id/max_temp"
-        app:layout_constraintTop_toBottomOf="@+id/max_temp" />
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="125dp"
+        android:text="L:00:00 °"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather" />
 
     <TextView
         android:id="@+id/day"
@@ -114,38 +115,38 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Tuesday"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/min_temo" />
+        app:layout_constraintEnd_toEndOf="@+id/min_temo"
+        app:layout_constraintStart_toStartOf="@+id/max_temp"
+        app:layout_constraintTop_toBottomOf="@+id/weather" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:text="15 January 2023"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/day"
-        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="@+id/day"
         app:layout_constraintTop_toBottomOf="@+id/day" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="280dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="210dp"
         android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="#80FFFFFF"
+
+        android:layout_marginBottom="30dp"
         app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date"
-        app:strokeColor="@color/white"
         app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -162,13 +163,12 @@
                 app:flow_wrapMode="chain"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <LinearLayout
                 android:id="@+id/linearLayout7"
-                android:layout_width="80dp"
-                android:layout_height="94dp"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
                 android:background="@drawable/backgroundviewshape"
                 android:gravity="bottom|center_vertical"
                 android:orientation="vertical">
@@ -200,8 +200,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout6"
-                android:layout_width="80dp"
-                android:layout_height="94dp"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
                 android:background="@drawable/backgroundviewshape"
                 android:gravity="bottom|center_vertical"
                 android:orientation="vertical">
@@ -232,8 +232,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="80dp"
-                android:layout_height="94dp"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
                 android:background="@drawable/backgroundviewshape"
                 android:gravity="bottom|center_vertical"
                 android:orientation="vertical">
@@ -264,8 +264,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout5"
-                android:layout_width="80dp"
-                android:layout_height="94dp"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
                 android:background="@drawable/backgroundviewshape"
                 android:gravity="bottom|center_vertical"
                 android:orientation="vertical">
@@ -296,8 +296,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="80dp"
-                android:layout_height="94dp"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
                 android:background="@drawable/backgroundviewshape"
                 android:gravity="bottom|center_vertical"
                 android:orientation="vertical">
@@ -328,8 +328,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
-                android:layout_width="80dp"
-                android:layout_height="88dp"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
                 android:background="@drawable/backgroundviewshape"
                 android:gravity="bottom|center_vertical"
                 android:orientation="vertical">
