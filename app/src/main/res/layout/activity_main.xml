@@ -26,6 +26,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/searchviewshape"
+        android:iconifiedByDefault = "false"
         android:queryHint="Locate City Forecast"
         android:searchIcon="@drawable/search"
         android:textColor="@color/white"
@@ -180,7 +181,7 @@
                     app:srcCompat="@drawable/conditions" />
 
                 <TextView
-                    android:id="@+id/rain"
+                    android:id="@+id/wc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"

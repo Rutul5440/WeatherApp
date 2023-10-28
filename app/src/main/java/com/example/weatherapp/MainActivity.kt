@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.ImageView
+import android.widget.SearchView
 import android.widget.TextView
 import androidx.core.view.WindowCompat
 import retrofit2.Call
@@ -26,9 +27,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 // To display the activity in full screen and also make the status bar and notification bar transparent in themes.xml
-
-
         fetchWeatherData("ahmedabad")
+        searchCity()
+    }
+
+    private fun searchCity() {
+        val searchView = findViewById<SearchView>(R.id.searchView)
+        searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (query != null){
+                    fetchWeatherData(query)
+                }
+
+                return true
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+                return true
+            }
+
+        })
     }
 
     private fun fetchWeatherData(cityName : String) {
@@ -47,8 +65,8 @@ class MainActivity : AppCompatActivity() {
                     val lowTemp = responseBody.main.temp_min
                     val humidity = responseBody.main.humidity
                     val windSpeed = responseBody.wind.speed
-                    val sunRise = responseBody.sys.sunrise
-                    val sunSet = responseBody.sys.sunset
+                    val sunRise = responseBody.sys.sunrise.toLong()
+                    val sunSet = responseBody.sys.sunset.toLong()
                     val seaLevel = responseBody.main.pressure
 
                     // Find the TextView with ID "temp"
@@ -64,6 +82,7 @@ class MainActivity : AppCompatActivity() {
                     val dayTextView = findViewById<TextView>(R.id.day)
                     val dateTextView = findViewById<TextView>(R.id.date)
                     val cityNameTextView = findViewById<TextView>(R.id.cityName)
+                    val wcTextView = findViewById<TextView>(R.id.wc)
 
                     // Set the variable values to the TextView
                     tempTextView.text = "$temperature°"
@@ -72,10 +91,10 @@ class MainActivity : AppCompatActivity() {
                     lowTempTextView.text = "L:$lowTemp°"
                     humidityTextView.text = "$humidity %"
                     windSpeedTextView.text = "$windSpeed m/s"
-                    sunRiseTextView.text = "$sunRise"
-                    sunSetTextView.text = "$sunSet"
+                    sunRiseTextView.text = "${time(sunRise)}"
+                    sunSetTextView.text = "${time(sunSet)}"
                     seaLevelTextView.text = "$seaLevel hpa"
-                    condTextView.text = condition
+                    wcTextView.text = condition
                     dayTextView.text = dayName(System.currentTimeMillis())
                     dateTextView.text = date()
                     cityNameTextView.text = "$cityName"
@@ -100,6 +119,9 @@ class MainActivity : AppCompatActivity() {
     private fun date(): String {
         val sdf = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
         return sdf.format((Date()))
+    }    private fun time(timestamp: Long): String {
+        val sdf = SimpleDateFormat("HH:mm", Locale.getDefault())
+        return sdf.format((Date(timestamp*1000)))
     }
 
     fun dayName(timestamp: Long): String {
