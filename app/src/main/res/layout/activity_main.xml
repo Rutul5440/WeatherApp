@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/searchviewshape"
         android:queryHint="Locate City Forecast"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:drawablePadding="10dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/searchView"
@@ -51,7 +51,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Today"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/weather"
+        android:id="@+id/cond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/temprature" />
 
     <TextView
-        android:id="@+id/max_temp"
+        android:id="@+id/high_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
@@ -95,10 +95,10 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weather" />
+        app:layout_constraintTop_toBottomOf="@+id/cond" />
 
     <TextView
-        android:id="@+id/min_temo"
+        android:id="@+id/low_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -107,26 +107,26 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weather" />
+        app:layout_constraintTop_toBottomOf="@+id/cond" />
 
     <TextView
         android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:text="Tuesday"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/min_temo"
-        app:layout_constraintStart_toStartOf="@+id/max_temp"
-        app:layout_constraintTop_toBottomOf="@+id/weather" />
+        app:layout_constraintEnd_toEndOf="@+id/low_temp"
+        app:layout_constraintStart_toStartOf="@+id/high_temp"
+        app:layout_constraintTop_toBottomOf="@+id/cond" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         android:text="15 January 2023"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/day"
@@ -140,8 +140,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="210dp"
         android:layout_marginEnd="16dp"
-
         android:layout_marginBottom="30dp"
+        app:cardBackgroundColor="#661E2249"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -186,7 +186,7 @@
                     android:gravity="center"
                     android:text="SUNNY"
                     android:textAllCaps="true"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <TextView
 
@@ -195,7 +195,7 @@
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
                     android:text="Condition"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -218,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="0.00 m/s"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <TextView
 
@@ -227,7 +227,7 @@
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
                     android:text="Wave"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -250,7 +250,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="00:00"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <TextView
 
@@ -259,7 +259,7 @@
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
                     android:text="Sunset"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -282,7 +282,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="00 %"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <TextView
 
@@ -291,7 +291,7 @@
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
                     android:text="Humidity"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -310,11 +310,12 @@
 
                 <TextView
 
+                    android:id="@+id/sunrisee"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="00:00"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <TextView
 
@@ -323,7 +324,7 @@
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
                     android:text="Sunrise"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
@@ -346,7 +347,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="0000 hPa"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <TextView
 
@@ -355,7 +356,7 @@
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
                     android:text="Sea"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
